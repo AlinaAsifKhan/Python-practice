@@ -1,9 +1,35 @@
-# Task 8: Bill Splitter
-total_bill = float(input("Enter the total bill amount: "))
-num_people = int(input("Enter the number of people: "))
+# Python program demonstrating all required concepts
 
-if num_people == 0:
-    print("Number of people cannot be zero.")
-else:
-    per_person = total_bill / num_people
-    print(f"Each person should pay: Rs {per_person:.2f}")
+print("Welcome to the Number Checker Program!")
+
+# Basic error handling for input
+try:
+    num = int(input("Enter a number between 1 and 10: "))
+
+    # if/else with comparison and logical operators
+    if num == 5:
+        print("You entered exactly 5!")
+    elif num > 5 and num <= 10:
+        print("Your number is greater than 5 but less than or equal to 10.")
+    elif num < 5 and num >= 1:
+        print("Your number is less than 5 but greater than or equal to 1.")
+    else:
+        print("Number is out of the allowed range.")
+
+    # Using 'not' operator
+    if not (num == 5):
+        print("Note: Your number is NOT 5.")
+
+    # for loop example: print numbers up to entered value
+    print("\nCounting up to your number using for loop:")
+    for i in range(1, num + 1):
+        print(i, end=" ")
+
+    # while loop example: countdown from entered value
+    print("\n\nCounting down from your number using while loop:")
+    while num > 0:
+        print(num, end=" ")
+        num -= 1
+
+except ValueError:
+    print("Invalid input! Please enter an integer.")
