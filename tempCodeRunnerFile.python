@@ -1,35 +1,48 @@
-# Python program demonstrating all required concepts
+fruits = ["apple", "banana", "cherry", "kiwi","mango","pineapple"]
+print("Original list:", fruits)
 
-print("Welcome to the Number Checker Program!")
+for fruit in fruits:
+    print(fruit, end=" ")
 
-# Basic error handling for input
-try:
-    num = int(input("Enter a number between 1 and 10: "))
+fruits.sort()
+print(fruits)
 
-    # if/else with comparison and logical operators
-    if num == 5:
-        print("You entered exactly 5!")
-    elif num > 5 and num <= 10:
-        print("Your number is greater than 5 but less than or equal to 10.")
-    elif num < 5 and num >= 1:
-        print("Your number is less than 5 but greater than or equal to 1.")
-    else:
-        print("Number is out of the allowed range.")
+i=0
+while i<len(fruits):
+    print(fruits[i], end=" ")
+    i=i+1
 
-    # Using 'not' operator
-    if not (num == 5):
-        print("Note: Your number is NOT 5.")
+'''# 1. Append(): Add item at the end
+fruits.append("mango")
+print("After append:", fruits)
 
-    # for loop example: print numbers up to entered value
-    print("\nCounting up to your number using for loop:")
-    for i in range(1, num + 1):
-        print(i, end=" ")
+# 2. Insert(): Insert at specific index
+fruits.insert(1, "orange")  # insert at index 1
+print("After insert:", fruits)
 
-    # while loop example: countdown from entered value
-    print("\n\nCounting down from your number using while loop:")
-    while num > 0:
-        print(num, end=" ")
-        num -= 1
+# 3. Remove(): Remove a specific item
+fruits.remove("banana")  # removes first occurrence of "banana"
+print("After remove:", fruits)
 
-except ValueError:
-    print("Invalid input! Please enter an integer.")
+# 4. Pop(): Remove by index
+fruits.pop(2)  # removes the item at index 2
+print("After pop:", fruits)
+
+# 5. del: Delete by index
+del fruits[0]  # deletes the first element
+print("After del [0]:", fruits)
+
+# (del can delete the entire list too, but we'll show later)
+
+# 6. Slicing: Access a portion of the list
+fruits.append("grape")
+fruits.append("kiwi")
+print("Current list:", fruits)
+print("Slicing [0:2]:", fruits[0:2])  # first two elements
+
+# 7. clear(): Empty the list
+fruits.clear()
+print("After clear:", fruits)
+
+ del fruits'''
+
